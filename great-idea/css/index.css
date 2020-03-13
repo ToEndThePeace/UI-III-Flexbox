@@ -70,7 +70,10 @@ h1, h2, h3, h4, h5 {
 /* General Styling */
 .container {
 	width: 90%;
-	margin: 0 auto;
+	margin: 0; /* TBLR */
+	margin: 0 auto; /* TB LR */
+	margin: 0 10px 50px;  /* T RL B */
+	margin: 0 10px 20px 30px; /* T R L B */
 	padding: 0 25px 25px;
 }
 section {
@@ -81,6 +84,13 @@ section > div {
 }
 section > div:last-child {
 	padding-right: 0;
+}
+.flex-right {
+	display: flex;
+	flex-flow: row-reverse nowrap;
+}
+h2.bigger {
+	font-size: 2em;
 }
 /* #region  Header */
 header {
