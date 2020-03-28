@@ -1,3 +1,4 @@
+/* #region CSS Reset  */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -62,5 +63,196 @@ h1, h2, h3, h4, h5 {
     letter-spacing: 1px;
     margin-bottom: 15px;
 }
+/* #endregion */
 
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+/*  Your code starts here! */
+
+/* General Styling */
+.container {
+	width: 90%;
+	margin: 0; /* TBLR */
+	margin: 0 auto; /* TB LR */
+	margin: 0 10px 50px;  /* T RL B */
+	margin: 0 10px 20px 30px; /* T R L B */
+	padding: 0 25px 25px;
+}
+section {
+	padding: 20px 0;
+}
+section > div {
+	padding-right: 20px;
+}
+section > div:last-child {
+	padding-right: 0;
+}
+.flex-right {
+	display: flex;
+	flex-flow: row-reverse nowrap;
+}
+h2.bigger {
+	font-size: 2em;
+}
+/* #region  Header */
+header {
+	width: 100%;
+	min-height: 60px;
+	padding: 10px;
+	display: flex;
+	flex-flow: row-reverse wrap;
+	align-content: center;
+	justify-content: space-around;
+}
+header nav {
+	width: 60%;
+	display: flex;
+	flex-flow: row wrap;
+	align-content: center;
+	justify-content: space-around;
+}
+header nav a {
+	color: #000;
+	text-decoration: none;
+	padding: 5px 10px;
+}
+header nav a:hover {
+	color: #999;
+}
+header .logo {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-content: center;
+	padding: 10px 0;
+}
+header img {
+	width: 183px;
+	height: 36px;
+}
+/* #endregion */
+
+/* #region  .splash */
+.splash {
+	width: 100%;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+.splash .splash_left {
+	width: 60%;
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+	padding: 0;
+}
+.splash .splash_right {
+	max-width: 300px;
+	display: flex;
+	flex-flow: row-reverse wrap;
+}
+.splash .splash_left h1 {
+	text-align: center;
+	font-size: 60px;
+}
+.splash .splash_left h2 {
+	width: 100%;
+	text-align: center;
+}
+.splash .splash_left h2 a {
+	text-align: center;
+	font-family: 'Titillium Web', sans-serif;
+	color: #000;
+	text-decoration: none;
+	border: 1px solid #000;
+	padding: 5px 30px;
+}
+.splash .splash_left h2 a:hover {
+	background-color: #eee;
+}
+.splash img {
+	width: 100%;
+	height: auto;
+	margin: 0;
+}
+
+
+/* #endregion */
+
+/* The Grid */
+.spaced {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+.col-1-2 {
+	width: 50%;
+}
+.col-1-3 {
+	width: 33%;
+}
+.col-1-3:last-child {
+	margin-right: 0;
+}
+
+/* Banner Image */
+.banner img {
+	width: 100%;
+	display: block;
+}
+.banner.no-top-pad {
+	padding-top: 0;
+}
+.top-line {
+	border-top: 1px solid #000;
+	padding-top: 40px;
+}
+.top-space {
+	margin-top: 20px;
+}
+
+/* Services Page */
+.card {
+	width: 48%;
+	padding: 25px;
+	background-color: #eee;
+	border: 1px solid #000;
+	margin-bottom: 30px;
+}
+.card:last-child {
+	padding-right: 25px;
+}
+.spaced p {
+	margin-bottom: 20px;
+}
+.card button {
+	background-color: #FFF;
+	font-family: "Titillium Web", sans-serif;
+	border: 1px solid #000;
+	padding: 5px 30px;
+	border-radius: 5px;
+}
+.card button:hover {
+	background-color: #c9c9c9;
+}
+section:not(.spaced) h1 {
+	font-size: 2em;
+}
+
+ul li {
+	list-style-type: disc;
+	list-style-position: inside;
+	margin-bottom: 10px;
+}
+img {
+	max-width: 100%;
+}
+
+/* Footer */
+footer {
+	padding: 20px 0 0;
+}
+small {
+	display: block;
+	text-align: center;
+	margin: 20px 0;
+}
